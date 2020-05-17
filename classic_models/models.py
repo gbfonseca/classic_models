@@ -60,7 +60,7 @@ class Offices(db.Model):
 class OrderDetails(db.Model):
     __tablename__ = 'orderDetails'
     orderNumber = db.Column(db.Integer, db.ForeignKey('orders.orderNumber'), primary_key=True)
-    productCode = db.Column(db.String(20), db.ForeignKey('products.productCode'))
+    productCode = db.Column(db.String(20), db.ForeignKey('products.productCode'), primary_key=True)
     quantityOrdered = db.Column(db.Integer)
     priceEach = db.Column(db.Float)
     orderLineNumber = db.Column(db.Integer)
